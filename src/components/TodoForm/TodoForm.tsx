@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import './TodoForm.scss';
+import { useTodosDispatch } from 'contexts/TodosContext';
 
 interface TodoFormProps {}
 
 const TodoForm = ({}: TodoFormProps) => {
   const [value, setValue] = useState('');
+  const dispatch = useTodosDispatch();
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    dispatch({
+      type: 'CREATE',
+      text: value,
+    });
+    setValue('');
   };
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
+import { TodosContextProvider } from 'contexts/TodosContext';
 
 const RootDiv = styled.div`
   display: flex;
@@ -22,13 +23,13 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <TodosContextProvider>
       <GlobalStyle />
       <RootDiv>
         <TodoForm />
         <TodoList />
       </RootDiv>
-    </>
+    </TodosContextProvider>
   );
 }
 
