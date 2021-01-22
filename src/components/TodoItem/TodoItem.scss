@@ -1,0 +1,40 @@
+/* your css code */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+@mixin centerSort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoItem {
+  @include centerSort();
+  flex-direction: row;
+  width: 90%;
+  height: 45px;
+  font-family: 'Noto Sans KR', sans-serif;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 5px;
+  &-index {
+    @include centerSort();
+    width: 5%;
+  }
+  &-text {
+    @include centerSort();
+    width: 80%;
+  }
+  &-ItemBtn {
+    @include centerSort();
+    width: 15%;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.3;
+}

@@ -1,0 +1,16 @@
+@mixin centerSort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoForm {
+  width: 80%;
+  @include centerSort();
+  &-input {
+    flex: 9;
+  }
+  &-button {
+    flex: 1;
+  }
+}

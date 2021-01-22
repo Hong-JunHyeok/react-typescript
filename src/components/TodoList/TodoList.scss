@@ -1,0 +1,13 @@
+/* your css code */
+
+@mixin centerSort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoList {
+  @include centerSort();
+  flex-direction: column;
+  width: 80%;
+}
