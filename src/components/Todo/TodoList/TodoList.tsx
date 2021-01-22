@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoItem from 'components/TodoItem';
+import TodoItem from 'components/Todo/TodoItem';
 import './TodoList.scss';
 import { useTodosState } from 'contexts/TodosContext';
 

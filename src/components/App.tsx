@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
+import TodoForm from './Todo/TodoForm';
+import TodoList from './Todo/TodoList';
 import { TodosContextProvider } from 'contexts/TodosContext';
 
 const RootDiv = styled.div`
